@@ -1,0 +1,40 @@
+<html>
+<head>
+    <script>
+        var stateByCategory = {
+     Ap : ["Select City", "Amaravathi", "Vijayawada", "Ongole", "Kanigiri", "Guntur", "Thirupathi"],
+     Ts : ["Select City", "Hyderabad", "Karimnagar", "Madhapur", "Warangal"],
+     Tn : ["Select City", "Chennai", "Golden Temple", "Marina Beach", "Fort St. George", "Mylapore"],
+     Ka : ["Select City", "Bangalore", " Bandipur National Park", "Hampi", "Mysore", "Othhivanasamudra Fallsers"],
+     Kr : ["Select City", "Cochin", "Alleppey", "Wayanad",  "Munnar", "Kumarakom"]
+ 
+}
+
+    function changeState(value) {
+        if (value.length == 0) document.getElementById("city").innerHTML = "<option>Select City</option>";
+        else {
+            var cityOptions = "";
+            for (categoryId in stateByCategory[value]) {
+                cityOptions += "<option>" + stateByCategory[value][categoryId] + "</option>";
+            }
+            document.getElementById("city").innerHTML = cityOptions;
+        }
+    }
+</script>
+</head>
+<body>
+            <select id="state" onChange="changeState(this.value);">
+                    <option value="">Select State</option>
+                    <option value="Ap">Andhra Pradesh</option>
+                    <option value="Ts">Telangana</option>
+                    <option value="Tn">Tamilnadu</option>
+                    <option value="Ka">Karnataka</option>
+                    <option value="Kr">Kerala</option>
+                </select>
+                
+                <select name="city" id="city">
+                    <option value="">Select City</option>
+                </select>
+                
+</body>
+</html>
