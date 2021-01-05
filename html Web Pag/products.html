@@ -1,0 +1,160 @@
+<html>
+    <head>
+      <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">  
+<style>
+    .container1{
+        border: 4px solid gray;
+        padding:30px;
+        height: auto;
+        width: 500px;
+        border-radius: 30px;
+        margin:20px 40px;
+        
+
+
+    }
+    
+    #pname{
+        color:indigo;
+        font-size: 26px;
+    }
+    #price{
+        color:red;
+        font-size: 26px; 
+    }
+   #rating{
+     color:white;
+     border-radius: 10px;
+     background-color: green;
+     display: inline;
+     font-size: 34px;
+     padding:5px 20px;
+     width:120px;
+
+ }
+ .con{
+     color:rgba(1, 255, 22, 0.822);
+     background-color: rgb(74, 107, 255);
+     
+     text-align:center;
+     padding-top: 20px;
+     padding-bottom: 20px;
+ }
+ footer{
+     color:rgba(255, 251, 31, 0.822);
+     background-color: rgb(137, 34, 255);
+     font-size:56px;
+     text-align:center;
+     padding-top: 20px;
+     padding-bottom: 20px;
+ }
+</style>  
+    </head>
+    <script>
+        //an object with the strings I want to grab
+var products = [{
+    pname: "Titan NH1639SL03C Analog Watch - For Men",
+    imageUrl: "https://rukminim1.flixcart.com/image/880/1056/j9n3ekw0/watch/7/n/9/nh1639sl03c-titan-original-imaezbuhhxc329vy.jpeg?q=50",
+    price: "₹4499",
+    rating:" 4.6 *"
+},
+{
+    pname: "Titan 2480KM01 Analog Watch - For Men",
+    imageUrl:"https://rukminim1.flixcart.com/image/660/792/jtd98y80/watch/x/r/b/nh9315bm01-titan-original-imafeq96nymkp6vh.jpeg?q=50",
+    price: "₹4999",
+    rating:" 4.6 *"
+},
+
+{
+    pname: "Titan NH1639SL03C Analog Watch - For Men",
+    imageUrl: "https://rukminim1.flixcart.com/image/660/792/jtx9evk0/watch/y/j/u/nh1639sm01-titan-original-imaff6ah3sbsgdpj.jpeg?q=50",
+    price: "₹5699",
+    rating:" 4.6 *"
+},
+{
+    pname: "Titan 1650YM05 Analog Watch - For Men",
+    imageUrl:"https://rukminim1.flixcart.com/image/660/792/jtuej680/watch/n/w/h/2480km01-titan-original-imaff2zzbbmebzgy.jpeg?q=50",
+    price:"₹6500",
+    rating:" 4.3*"
+},
+{
+    pname: "Raymond Solid Single Breasted Formal Men Blazer  (Black)",
+    imageUrl:"https://rukminim1.flixcart.com/image/880/1056/juljwcw0/blazer/c/m/e/46-rmjx01689-k4-raymond-original-imafezgf5fgsuaer.jpeg?q=50",
+    price:"₹12000",
+    rating:" 4.2*"
+},
+{
+    pname: "Raymond Solid Bandhgala Formal Men Blazer  (Dark Blue)",
+    imageUrl:"https://rukminim1.flixcart.com/image/660/792/jyyqc280/blazer/g/m/j/44-rmjx01791-b7-raymond-original-imafj29smygysb7f.jpeg?q=50",
+    price:"₹8999",
+    rating:" 3.4*"
+},
+{
+    pname: "Raymond Regular Fit Men Blue Polyester Trousers",
+    imageUrl:"https://rukminim1.flixcart.com/image/660/792/jyxaw7k0/trouser/4/n/p/46-rmtx03079-b5-raymond-original-imafj29hpb35n4qb.jpeg?q=50",
+    price:"₹7599",
+    rating:" 4.7*"
+},
+{
+    pname: "Puma Solid Men Dark Green Track Pants",
+    imageUrl:"https://rukminim1.flixcart.com/image/660/792/kg40k280/track-pant/f/j/b/m-58973602-puma-original-imafwe5jftxuzcw7.jpeg?q=50",
+    price:"₹4599",
+    rating:" 4.4*"
+},
+{
+    pname: "Crochetin Woven Tangail Handloom Pure Cotton Saree  (Yellow)",
+    imageUrl:"https://rukminim1.flixcart.com/image/660/792/j63x7rk0/sari/r/b/w/free-d1160-crochetin-original-imaewmpexjhn63qp.jpeg?q=50",
+    price:"₹5999",
+    rating:" 3.8*"
+},
+
+{
+    pname: "Raymond Men Slim Fit Solid Spread Collar Formal Shirt",
+    imageUrl:"https://rukminim1.flixcart.com/image/660/792/k55n0y80/shirt/x/r/f/40-rmsz09861-b6-raymond-original-imafnujxmrpvx9py.jpeg?q=50",
+    price:"₹4699",
+    rating:" 5.0*"
+},
+{
+    pname: "Rk Brand  Printed Men Blue Regular Shorts",
+    imageUrl:"https://rukminim1.flixcart.com/image/880/1056/kdga1zk0/short/g/8/y/xl-tnvshortabs1-tripr-original-imafuccyk5tp66gb.jpeg?q=50",
+    price:"₹899",
+    rating:" 4.1 *"
+},
+{
+    pname: "Mimosa Woven Kanjivaram Art Silk Saree  (Red, Gold)",
+    imageUrl:"https://rukminim1.flixcart.com/image/660/792/sari/g/k/3/1-1-3299-224-cku-mrn-mimosa-original-imaehmzgpybacve9.jpeg?q=50",
+    price:"₹4599",
+    rating:" 4.8*"
+}
+]
+
+
+//array of objects, each of which has three strings in them
+
+
+//the function that puts the object's strings into the HTML
+function insertOption(){   
+  
+var con = document.getElementById('container');
+
+    for(i = 0; i < products.length; i++){
+        var p = products[i];
+        con.innerHTML += "<div class='container1 col-sm-6 col-md-4'><span style='border:5px solid red;border-radius:30px;font-size:26px;padding:5px;'>0"+(i+1)+"</span><br><br><p id='pname'>"+ p.pname+"</p><img src="+ p.imageUrl+"  height='500px'><p id='price'>Price : "+p.price+"</p><p id='rating'>"+p.rating+"</p></div> ";
+  
+}
+}
+</script>
+
+<body onload="insertOption()";>
+    <div class="con">
+        <h1><b  style="font-size:46px">RK Shoping Mall</b></h1>
+    </div>
+    <div class="row"  id="container">
+    
+</div>
+<div><footer>
+    <h2>This site Developed By <span style="color:rgb(255, 159, 6); font-size:40px">RK Tech Solutions</span> Pvt Lmt Com </h2>
+</footer></div>
+    </body>
+</html>

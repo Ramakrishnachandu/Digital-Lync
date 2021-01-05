@@ -1,0 +1,76 @@
+<html>
+    <head>
+<style>
+    .container{
+        border: 4px solid gray;
+        padding:30px;
+        height: auto;
+        width: 500px;
+        border-radius: 30px;
+
+
+    }
+    #pname{
+        color:indigo;
+        font-size: 26px;
+    }
+    #price{
+        color:red;
+        font-size: 26px; 
+    }
+   #rating{
+     color:white;
+     border-radius: 10px;
+     background-color: green;
+     display: inline;
+     font-size: 34px;
+     padding:5px 20px;
+     width:120px;
+
+ }
+</style>
+    </head>
+    <script>
+        //an object with the strings I want to grab
+var product1 = {
+    pname: "Titan NH1639SL03C Analog Watch - For Men",
+    imageUrl: "https://rukminim1.flixcart.com/image/880/1056/j9n3ekw0/watch/7/n/9/nh1639sl03c-titan-original-imaezbuhhxc329vy.jpeg?q=50",
+    price: "₹4500",
+    rating:" 4.6 *"
+}
+var product2 = {
+    pname: "Titan NH1639SL03C Analog Watch - For Men",
+    imageUrl: "https://rukminim1.flixcart.com/image/880/1056/j9n3ekw0/watch/7/n/9/nh1639sl03c-titan-original-imaezbuhhxc329vy.jpeg?q=50",
+    price: "₹4500",
+    rating:" 4.6 *"
+}
+var product3 = {
+    pname: "Titan NH1639SL03C Analog Watch - For Men",
+    imageUrl: "https://rukminim1.flixcart.com/image/880/1056/j9n3ekw0/watch/7/n/9/nh1639sl03c-titan-original-imaezbuhhxc329vy.jpeg?q=50",
+    price: "₹4500",
+    rating:" 4.6 *"
+}
+
+//array of objects, each of which has three strings in them
+var optionArray = [product1, product2, product3];
+
+
+//the function that puts the object's strings into the HTML
+function insertOption(){       
+    document.getElementById('pname').innerHTML = optionArray[0].pname;
+    document.getElementById('image').src = product1.imageUrl;
+    document.getElementById('price').innerHTML = product1.price;
+    document.getElementById('rating').innerHTML = product1.rating;
+}
+</script>
+
+<body onload="insertOption()";>
+    <div class="container">
+    <p id='pname'></p>
+    <img src="" id='image' height="500px"><br>
+    <p id='price'></p>
+    <p id="rating"></p>
+</div>
+
+    </body>
+</html>
